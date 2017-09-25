@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from imbd import views
+
 urlpatterns = [
+    url(r'^$', views.imbdparser, name='home'),
     url(r'^admin/', admin.site.urls),
 ]
