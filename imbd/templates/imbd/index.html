@@ -6,7 +6,15 @@
 </head>
 <body>
 <h1> Hello Some one</h1>
+{% for movie in movie_list %}
+<h4>{{ movie.title }}</h4>
+    <p>{{ movie.description }}</p>
+    <p>{{ movie.image }}</p>
+    <p>{{ movie.director }}</p>
+    <p>{{ movie.rating }}</p>
+    <p>{{ movie.genre }}</p>
+    <p>{{ movie.star }}</p>
 
-{{ responce.text }}
+{% endfor %}
 </body>
 </html>
