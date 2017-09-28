@@ -95,13 +95,28 @@ body {
 
 /* test style*/
 .my{
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
     font-size: 13px;
     padding: 10px;
     margin-bottom: 0;
 }
-.my1{
-    /*background-color: bisque;*/
+.rating{
+
+}
+.high-rate{
+    padding: 1px 4px;
+}
+.low-rate{
+    background-color: red;
+    padding: 1px 4px;
+}
+.rate{
+  background-color: greenyellow;
+    padding: 1px 4px;
+  }
+.middle-rate{
+  background-color: yellow;
+    padding: 1px 4px;
 }
 .overview{
     vertical-align: top;

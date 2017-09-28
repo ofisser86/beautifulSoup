@@ -24,7 +24,8 @@ def imbdparser(request):
     # ========== End test ===========
     for movie in movie_containers:
         # Check rating. Because Without check get an error NoneType object have not text attr
-        rating = movie.find('span', class_='metascore favorable')
+        rating = movie.find('span', class_='metascore')
+        #rating = movie.find_next('div', class_='rating_txt')
         if rating is not None:
             rating = rating.text
         else:
