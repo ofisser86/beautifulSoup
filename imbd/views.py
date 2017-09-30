@@ -40,7 +40,7 @@ def imbdparser(request):
             # get rating
             'rating': rating,
             # Get rating list, clear from tags and \n, convert list to string
-            'genre': '|'.join(map(str, [genre.text.strip('\n') for genre in movie.select('span[itemprop="genre"]')])),
+            'genre': '| '.join(map(str, [genre.text.strip('\n') for genre in movie.select('span[itemprop="genre"]')])),
 
           }
         )

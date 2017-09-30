@@ -104,6 +104,7 @@ body {
 
 }
 .high-rate{
+    background-color: greenyellow;
     padding: 1px 4px;
 }
 .low-rate{
@@ -111,12 +112,15 @@ body {
     padding: 1px 4px;
 }
 .rate{
-  background-color: greenyellow;
+
     padding: 1px 4px;
   }
 .middle-rate{
-  background-color: yellow;
+    background-color: yellow;
     padding: 1px 4px;
+}
+.box-shadow{
+    box-shadow: 10px 10px 5px #888888;
 }
 .overview{
     vertical-align: top;
@@ -124,4 +128,7 @@ body {
 .description {
     margin-bottom: 8px;
     margin-top: 8px;
+}
+.uprow{
+    margin-top: 30px;
 }

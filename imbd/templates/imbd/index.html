@@ -19,7 +19,7 @@
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
     {% block extra_css %}{% endblock extra_css %}
 </head>
-<body>
+<div>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Carousel</a>
@@ -42,7 +42,9 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="row uprow">
+<div class="col-lg-12">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -89,7 +91,8 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+</div>
+</div>
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
@@ -97,19 +100,25 @@
 
 <div class="container marketing mycontainer">
     <div class="row">
-
-        <div class="col-lg-9 my">
+        <div class="col-lg-12">
+            <h1 class="text-center">Opening This Week movies in the theatres</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row  align-self-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 my">
 
             <table class="table table-striped">
                 <tbody>
                 {% for movie in movie_list %}
-                    <tr>
+                    <tr class="box-shadow">
                         <td><img src="{{ movie.image }}"></td>
                         <td class="overview">
                             <h4>{{ movie.title }}</h4>
-                            <p> Action | Biography | Comedy | Crime | Drama | History | Thriller</p>
+                            <p>{{ movie.genre }}</p>
                             <div class="rating">Metascore: <span
-                                    class="rate {% if movie.rating|add:0 >= 60 %} high-rate {% elif movie.rating|add:0 <= 60 and movie.rating|add:0 >= 40 %} middle-rate {% else %} low-rate {% endif %}">{{ movie.rating }}</span>
+                                    class="rate {% if movie.rating|add:0 >= 60 %} high-rate {% elif movie.rating|add:0 <= 60 and movie.rating|add:0 >= 40 %} middle-rate {% elif  movie.rating|add:0 < 40 %} low-rate {% endif %}">{{ movie.rating }}</span>
                             </div>
                             <div class="description">{{ movie.description }}</div>
                             <div class="director"><strong>Director: </strong>{{ movie.director }}</div>
@@ -122,7 +131,7 @@
             </table>
 
         </div>
-
+        <div class="col-lg-2"></div>
     </div>
     <hr class="featurette-divider">
 
@@ -156,14 +165,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
-{##}
-{#{% for movie in movie_list %}#}
-{#{{ movie.title }}#}
-{#    <p>{{ movie.description }}</p>#}
-{#    <p>{{ movie.image }}</p>#}
-{#    <p>{{ movie.director }}</p>#}
-{#    <p>{{ movie.rating }}</p>#}
-{#    <p>{{ movie.genre }}</p>#}
-{#    <p>{{ movie.star }}</p>#}
-{##}
-{#{% endfor %}#}
