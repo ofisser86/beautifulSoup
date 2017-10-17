@@ -118,6 +118,7 @@
                             <h4>{{ movie.title }}</h4>
                             <p>{{ movie.genre }}</p>
                             <div class="rating">Metascore: <span
+                                                                 <!--Use filter |add:0 for converting str to int-->
                                     class="rate {% if movie.rating|add:0 >= 60 %} high-rate {% elif movie.rating|add:0 <= 60 and movie.rating|add:0 >= 40 %} middle-rate {% elif  movie.rating|add:0 < 40 %} low-rate {% endif %}">{{ movie.rating }}</span>
                             </div>
                             <div class="description">{{ movie.description }}</div>
