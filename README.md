@@ -6,4 +6,4 @@ Using:
 - BeautifulSoup (bs4)
 -requests library
 - Pillow
-- Python 3.6
+- Python now )
